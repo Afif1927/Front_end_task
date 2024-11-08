@@ -13,7 +13,6 @@ const header = [
   { title: "Stats" , number: 9},
  ]
 
-
 const MainContainer = () => {
   return (
     <div className='flex gap-4  bg-white h-screen p-4'>
