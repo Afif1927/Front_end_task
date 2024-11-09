@@ -19,12 +19,10 @@ const Card = () => {
     []
   );
 
-  // Toggle modal visibility
   const handlePaperclipClick = () => {
     setShowModal(!showModal);
   };
 
-  // Handle file upload
   const handleFileChange = (event) => {
     const files = Array.from(event.target.files);
     console.log(event);
@@ -37,7 +35,6 @@ const Card = () => {
 
   return (
     <div className='bg-white text-[10px] rounded p-2'>
-      {/* Header with Client and User Info */}
       <div className='flex justify-between mb-2'>
         <div className='flex gap-1 items-center'>
           <div className='w-[22px] h-[22px] rounded-full overflow-hidden'>
@@ -61,7 +58,6 @@ const Card = () => {
         </div>
       </div>
 
-      {/* Project Details */}
       <div className='flex justify-between mb-2'>
         <p className='flex gap-1'>
           <span className='text-gray-700'>
@@ -80,7 +76,6 @@ const Card = () => {
         </h4>
       </div>
 
-      {/* Footer with Icons and Details */}
       <div className='flex justify-between items-center'>
         <div className='w-[22px] h-[22px] rounded-full overflow-hidden'>
           <img
