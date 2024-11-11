@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLayerGroup,
@@ -19,13 +19,19 @@ const Card = () => {
     []
   );
 
+  useEffect(() => {
+    if (!showModal) {
+      setAttachments([]);
+    }
+  }, [showModal]);
+
   const handlePaperclipClick = () => {
     setShowModal(!showModal);
   };
 
   const handleFileChange = (event) => {
-    const files = Array.from(event.target.files);
     console.log(event);
+    const files = Array.from(event.target.files);
     const fileDetails = files.map((file) => ({
       name: file.name,
       extension: file.name.split(".").pop(),
